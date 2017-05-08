@@ -22,7 +22,7 @@ while True :
 	# Kirim balik ke client
 	conn.send(data)
 	# Tutup koneksi
-	conn.close()
+	# conn.close()
 
 
 
