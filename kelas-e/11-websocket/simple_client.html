@@ -1,0 +1,24 @@
+<head>
+	<title>Simple Websocket Client</title>
+	<script type="text/javascript">
+		ws = new WebSocket('ws://localhost:7777/');
+
+		ws.onmessage = function(evt){
+			alert(evt.data);
+		};
+
+		function kirimData(){
+			nama = document.getElementById('nama');
+			//alert(nama.value);
+			ws.send(nama.value);
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text" name="nama" id="nama">
+	<button onclick="kirimData()">Kirim</button>
+	<div id="hasil" nama="hasil">
+		Ini bagian hasil
+	</div>
+</body>
